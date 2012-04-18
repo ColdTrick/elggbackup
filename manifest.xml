@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin_manifest>
+	<field key="author" value="ColdTrick IT Solutions" />
+	<field key="version" value="0.6" />
+	<field key="description" value="Schedules a backup of your most important files" />
+	<field key="website" value="http://www.coldtrick.com/" />
+	<field key="copyright" value="(C) ColdTrick IT Solutions 2009" />
+	<field key="licence" value="GNU Public License version 2" />
+	<field key="elgg_version" value="2009031301" />
+</plugin_manifest>
+<!-- 
+Schedules a backup for your the following items:
+	- data dir
+	- settings.php
+	- .htaccess
+	- full db (mysqldump)
+and 
+	- mail a zip
+	- upload it to a ftp location
+
+Can also manualy request a backup to be downloaded (button in the admin settings) or tested based on configured settings.
+
+Depends on:
+	- cron working! (daily, weekly, monthly)
+	- email provider accepting large files and zip files (when using email option)
+	- you need to save the settings once!
+	- phpmailer plugin (only for backup-to-mail option)
+
+Version History
+0.6
+	- added: backup-to-ftp for remote backup
+	- added: button for testing the configured settings
+	- added: direct download when doing a manual download from admin settings
+0.5
+	- first release to the public
+
+Todo:
+	- validate emailto as valid email adress
+	- admin option for locking the table on mysqldump
+	- send errors in mail
+	- work with AND without phpmailer
+	- backup-to-disk only option (so no email/ftp), with retention
+	- secure zipfiles (encryption)
+	- restore from zip (no priority)
+	
+DISCLAIMER: I do not accept any responsibility or liability for any damage or loss that will result directly or indirectly from using this plugin even if it is based on an error of the plugin.
+-->
